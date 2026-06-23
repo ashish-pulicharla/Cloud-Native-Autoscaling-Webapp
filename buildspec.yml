@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "====================================="
+      - echo "Cloud-Native AWS Project Build Started"
+      - echo "Installing Dependencies..."
+      - echo "====================================="
+
+  pre_build:
+    commands:
+      - echo "Validating Application Files..."
+      - ls -la
+      - ls -la app/
+
+  build:
+    commands:
+      - echo "Building Cloud-Native Web Application..."
+      - echo "Build Completed Successfully"
+
+  post_build:
+    commands:
+      - echo "Preparing Deployment Artifacts..."
+      - echo "Build Finished on $(date)"
+
+artifacts:
+  files:
+    - '**/*'
+
+  discard-paths: no
