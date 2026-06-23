@@ -1,121 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud-Native Auto-Scaling Web Application</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fc;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: #232f3e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #232f3e;
-        }
-
-        ul {
-            line-height: 1.8;
-        }
-
-        footer {
-            background: #232f3e;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-
-        .status {
-            color: green;
-            font-weight: bold;
-        }
-    </style>
+<title>AWS Cloud Native Application</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Cloud-Native Auto-Scaling Web Application</h1>
-    <p>CI/CD, Monitoring & Infrastructure Automation on AWS</p>
-</header>
+<h1>Cloud-Native Auto Scaling Web Application</h1>
 
-<div class="container">
+<p>
+CI/CD Deployment using AWS Services
+</p>
 
-    <div class="card">
-        <h2>Project Overview</h2>
-        <p>
-            This project demonstrates a cloud-native web application deployed on AWS
-            using Auto Scaling, Load Balancing, CI/CD Pipeline, Monitoring, and
-            Infrastructure as Code.
-        </p>
-    </div>
+<h2>AWS Services</h2>
 
-    <div class="card">
-        <h2>AWS Services Used</h2>
-        <ul>
-            <li>Amazon EC2</li>
-            <li>Application Load Balancer (ALB)</li>
-            <li>Auto Scaling Group (ASG)</li>
-            <li>Amazon RDS</li>
-            <li>AWS CodePipeline</li>
-            <li>AWS CodeBuild</li>
-            <li>AWS CodeDeploy</li>
-            <li>Amazon CloudWatch</li>
-            <li>Amazon S3</li>
-            <li>IAM & VPC</li>
-        </ul>
-    </div>
+<ul>
+<li>EC2</li>
+<li>Load Balancer</li>
+<li>Auto Scaling</li>
+<li>RDS</li>
+<li>CodePipeline</li>
+<li>CodeBuild</li>
+<li>CodeDeploy</li>
+<li>CloudWatch</li>
+</ul>
 
-    <div class="card">
-        <h2>Architecture Workflow</h2>
-        <p>
-            User → Route53 → Load Balancer → EC2 Auto Scaling Group → RDS Database
-        </p>
-    </div>
+<button onclick="checkStatus()">
+Check Deployment Status
+</button>
 
-    <div class="card">
-        <h2>CI/CD Pipeline</h2>
-        <p>
-            GitHub → CodePipeline → CodeBuild → S3 → CodeDeploy → EC2
-        </p>
-    </div>
+<p id="status"></p>
 
-    <div class="card">
-        <h2>Deployment Status</h2>
-        <p class="status">
-            Application Successfully Deployed via AWS CI/CD Pipeline
-        </p>
-    </div>
-
-</div>
-
-<footer>
-    <p>Cloud-Native AWS Project | Team DevOps Portfolio</p>
-</footer>
+<script src="app.js"></script>
 
 </body>
+
 </html>
