@@ -3,29 +3,36 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "====================================="
-      - echo "Cloud-Native AWS Project Build Started"
-      - echo "Installing Dependencies..."
-      - echo "====================================="
+      # Optional: Install tools or check versions if needed for your environment setup
+      - echo "Checking environment utilities..."
+      - echo "Current date and time:" $(date)
 
   pre_build:
     commands:
-      - echo "Validating Application Files..."
-      - ls -la
-      - ls -la app/
+      - echo "Validating directory structure and permissions..."
+      # Ensure all deployment shell scripts are explicitly marked as executable before packaging
+      - chmod +x scripts/install.sh
+      - chmod +x scripts/start.sh
+      - chmod +x scripts/stop.sh
+      - chmod +x scripts/deploy.sh
 
   build:
     commands:
-      - echo "Building Cloud-Native Web Application..."
-      - echo "Build Completed Successfully"
+      - echo "Build phase started..."
+      - echo "Compiling, testing or minifying could happen here if using build tools."
+      - echo "For a vanilla application, verifying core files exist..."
+      - ls -la app/
 
   post_build:
     commands:
-      - echo "Preparing Deployment Artifacts..."
-      - echo "Build Finished on $(date)"
+      - echo "Build phase complete. Preparing artifacts for AWS CodeDeploy..."
 
 artifacts:
   files:
-    - '**/*'
-
-  discard-paths: no
+    # Include all frontend code
+    - 'app/**/*'
+    # Include all lifecycle shell scripts
+    - 'scripts/**/*'
+    # Include the CodeDeploy appspec configuration file
+    - 'appspec.yml'
+  name: pipeline-build-artifact
