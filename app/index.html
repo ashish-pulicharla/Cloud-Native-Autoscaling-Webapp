@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title>AWS Cloud Native Application</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Pipeline Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <h1>🚀 Pipeline Command Center</h1>
+        <div id="status-badge" class="badge idle">System Idle</div>
+    </header>
 
-<h1>Cloud-Native Auto Scaling Web Application</h1>
+    <main>
+        <!-- Metrics Section -->
+        <section class="metrics-grid">
+            <div class="card">
+                <h3>CPU Usage</h3>
+                <p id="cpu-val" class="metric">12%</p>
+                <div class="progress-bar"><div id="cpu-bar" style="width: 12%"></div></div>
+            </div>
+            <div class="card">
+                <h3>Memory Usage</h3>
+                <p id="ram-val" class="metric">42%</p>
+                <div class="progress-bar"><div id="ram-bar" style="width: 42%"></div></div>
+            </div>
+            <div class="card">
+                <h3>Active Deployments</h3>
+                <p id="deploy-count" class="metric">0</p>
+            </div>
+        </section>
 
-<p>
-CI/CD Deployment using AWS Services
-</p>
+        <!-- Actions Section -->
+        <section class="action-zone">
+            <button id="deploy-btn" class="btn-primary">Trigger CodePipeline (deploy.sh)</button>
+        </section>
 
-<h2>AWS Services</h2>
+        <!-- Terminal Logs Section -->
+        <section class="terminal-container">
+            <div class="terminal-header">
+                <span>Console Logs (AWS CodeBuild / CodeDeploy)</span>
+                <span class="dots">● ● ●</span>
+            </div>
+            <div id="terminal-body" class="terminal-body">
+                <div class="log-line system">[SYSTEM] Dashboard initialized. Awaiting user input...</div>
+            </div>
+        </section>
+    </main>
 
-<ul>
-<li>EC2</li>
-<li>Load Balancer</li>
-<li>Auto Scaling</li>
-<li>RDS</li>
-<li>CodePipeline</li>
-<li>CodeBuild</li>
-<li>CodeDeploy</li>
-<li>CloudWatch</li>
-</ul>
-
-<button onclick="checkStatus()">
-Check Deployment Status
-</button>
-
-<p id="status"></p>
-
-<script src="app.js"></script>
-
+    <script src="app.js"></script>
 </body>
-
 </html>
