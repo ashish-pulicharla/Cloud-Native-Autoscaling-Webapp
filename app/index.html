@@ -1,40 +1,96 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title>AWS Cloud Native Application</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud-Native Auto Scaling Web Application</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<h1>Cloud-Native Auto Scaling Web Application</h1>
+<header>
+    <h1>Cloud-Native Auto Scaling Web Application</h1>
+    <p>Hosted on AWS using EC2 Auto Scaling, Application Load Balancer & CI/CD Pipeline</p>
+</header>
 
-<p>
-CI/CD Deployment using AWS Services
-</p>
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">AWS Services</a>
+    <a href="#status">System Status</a>
+    <a href="#contact">Team</a>
+</nav>
 
-<h2>AWS Services</h2>
+<section id="about">
+    <h2>About Project</h2>
+    <p>
+        This project demonstrates a scalable and highly available cloud-native web application
+        deployed on AWS. The application automatically scales EC2 instances based on CPU
+        utilization using Auto Scaling Groups and distributes traffic through an Application
+        Load Balancer. Continuous Integration and Continuous Deployment (CI/CD) automates
+        application deployment, while CloudWatch provides real-time monitoring and alerts.
+    </p>
+</section>
+
+<section id="services">
+    <h2>AWS Services Used</h2>
+
+    <div class="card">
+        <h3>Amazon EC2</h3>
+        <p>Hosts the web application instances.</p>
+    </div>
+
+    <div class="card">
+        <h3>Application Load Balancer</h3>
+        <p>Distributes incoming traffic across multiple EC2 instances.</p>
+    </div>
+
+    <div class="card">
+        <h3>Auto Scaling Group</h3>
+        <p>Automatically adds or removes EC2 instances based on demand.</p>
+    </div>
+
+    <div class="card">
+        <h3>Amazon RDS</h3>
+        <p>Provides a managed relational database service.</p>
+    </div>
+
+    <div class="card">
+        <h3>Amazon CloudWatch</h3>
+        <p>Monitors application health, CPU utilization, and system metrics.</p>
+    </div>
+
+</section>
+
+<section id="status">
+
+    <h2>Application Status</h2>
+
+    <button onclick="showStatus()">Check System Health</button>
+
+    <p id="message"></p>
+
+</section>
+
+<section id="contact">
+
+<h2>Project Team</h2>
 
 <ul>
-<li>EC2</li>
-<li>Load Balancer</li>
-<li>Auto Scaling</li>
-<li>RDS</li>
-<li>CodePipeline</li>
-<li>CodeBuild</li>
-<li>CodeDeploy</li>
-<li>CloudWatch</li>
+<li>Member 1 - AWS Infrastructure Setup</li>
+<li>Member 2 - EC2, Auto Scaling & Load Balancer</li>
+<li>Member 3 - CI/CD Pipeline & Deployment</li>
+<li>Member 4 - CloudWatch Monitoring & Documentation</li>
 </ul>
 
-<button onclick="checkStatus()">
-Check Deployment Status
-</button>
+</section>
 
-<p id="status"></p>
+<footer>
 
-<script src="app.js"></script>
+<p>Cloud-Native Auto Scaling Web Application | AWS Project © 2026</p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
