@@ -3,94 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud-Native Auto Scaling Web Application</title>
+    <title>DevOps Pipeline Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>🚀 Pipeline Command Center</h1>
+        <div id="status-badge" class="badge idle">System Idle</div>
+    </header>
 
-<header>
-    <h1>Cloud-Native Auto Scaling Web Application</h1>
-    <p>Hosted on AWS using EC2 Auto Scaling, Application Load Balancer & CI/CD Pipeline</p>
-</header>
+    <main>
+        <!-- Metrics Section -->
+        <section class="metrics-grid">
+            <div class="card">
+                <h3>CPU Usage</h3>
+                <p id="cpu-val" class="metric">12%</p>
+                <div class="progress-bar"><div id="cpu-bar" style="width: 12%"></div></div>
+            </div>
+            <div class="card">
+                <h3>Memory Usage</h3>
+                <p id="ram-val" class="metric">42%</p>
+                <div class="progress-bar"><div id="ram-bar" style="width: 42%"></div></div>
+            </div>
+            <div class="card">
+                <h3>Active Deployments</h3>
+                <p id="deploy-count" class="metric">0</p>
+            </div>
+        </section>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#services">AWS Services</a>
-    <a href="#status">System Status</a>
-    <a href="#contact">Team</a>
-</nav>
+        <!-- Actions Section -->
+        <section class="action-zone">
+            <button id="deploy-btn" class="btn-primary">Trigger CodePipeline (deploy.sh)</button>
+        </section>
 
-<section id="about">
-    <h2>About Project</h2>
-    <p>
-        This project demonstrates a scalable and highly available cloud-native web application
-        deployed on AWS. The application automatically scales EC2 instances based on CPU
-        utilization using Auto Scaling Groups and distributes traffic through an Application
-        Load Balancer. Continuous Integration and Continuous Deployment (CI/CD) automates
-        application deployment, while CloudWatch provides real-time monitoring and alerts.
-    </p>
-</section>
+        <!-- Terminal Logs Section -->
+        <section class="terminal-container">
+            <div class="terminal-header">
+                <span>Console Logs (AWS CodeBuild / CodeDeploy)</span>
+                <span class="dots">● ● ●</span>
+            </div>
+            <div id="terminal-body" class="terminal-body">
+                <div class="log-line system">[SYSTEM] Dashboard initialized. Awaiting user input...</div>
+            </div>
+        </section>
+    </main>
 
-<section id="services">
-    <h2>AWS Services Used</h2>
-
-    <div class="card">
-        <h3>Amazon EC2</h3>
-        <p>Hosts the web application instances.</p>
-    </div>
-
-    <div class="card">
-        <h3>Application Load Balancer</h3>
-        <p>Distributes incoming traffic across multiple EC2 instances.</p>
-    </div>
-
-    <div class="card">
-        <h3>Auto Scaling Group</h3>
-        <p>Automatically adds or removes EC2 instances based on demand.</p>
-    </div>
-
-    <div class="card">
-        <h3>Amazon RDS</h3>
-        <p>Provides a managed relational database service.</p>
-    </div>
-
-    <div class="card">
-        <h3>Amazon CloudWatch</h3>
-        <p>Monitors application health, CPU utilization, and system metrics.</p>
-    </div>
-
-</section>
-
-<section id="status">
-
-    <h2>Application Status</h2>
-
-    <button onclick="showStatus()">Check System Health</button>
-
-    <p id="message"></p>
-
-</section>
-
-<section id="contact">
-
-<h2>Project Team</h2>
-
-<ul>
-<li>Member 1 - AWS Infrastructure Setup</li>
-<li>Member 2 - EC2, Auto Scaling & Load Balancer</li>
-<li>Member 3 - CI/CD Pipeline & Deployment</li>
-<li>Member 4 - CloudWatch Monitoring & Documentation</li>
-</ul>
-
-</section>
-
-<footer>
-
-<p>Cloud-Native Auto Scaling Web Application | AWS Project © 2026</p>
-
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="app.js"></script>
 </body>
 </html>
