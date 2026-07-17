@@ -1,5 +1,4 @@
 #!/bin/bash
 
-yum update -y
-
-yum install httpd -y
+cd /home/ec2-user/app
+npm install
