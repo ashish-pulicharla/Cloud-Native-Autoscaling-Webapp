@@ -28,7 +28,9 @@ Terraform was used to provision the AWS infrastructure, including the VPC, subne
 
 The networking configuration consists of a custom VPC with public and private subnets, an Internet Gateway, NAT Gateway, and Route Tables.
 
-![VPC Architecture](../C:\Users\shazi\OneDrive\Pictures\Saved Pictures\VPC.jpeg)
+![VPC Architecture]<img width="1600" height="900" alt="ec2 launch template" src="https://github.com/user-attachments/assets/4be8ab6b-4651-43fa-b4f1-249082ab64b0" />
+<img width="1600" height="755" alt="VPC" src="https://github.com/user-attachments/assets/58d21389-ca7c-41c9-8f46-2d2e493b9a21" />
+
 
 ---
 
@@ -36,7 +38,8 @@ The networking configuration consists of a custom VPC with public and private su
 
 The application is hosted on Amazon EC2 instances running Ubuntu and Nginx.
 
-![EC2 Instance](../screenshots/ec2/ec2-instance.png)
+![EC2 Instance]<img width="1600" height="900" alt="ec2 launch template" src="https://github.com/user-attachments/assets/d3965bce-c520-4045-80b9-7467675769bb" />
+
 
 ---
 
@@ -44,7 +47,8 @@ The application is hosted on Amazon EC2 instances running Ubuntu and Nginx.
 
 The Auto Scaling Group automatically manages the desired number of EC2 instances.
 
-![Auto Scaling Group](../screenshots/autoscaling/autoscaling-group.png)
+![Auto Scaling Group]<img width="1600" height="900" alt="ASG" src="https://github.com/user-attachments/assets/c7db3b27-4ffc-4cda-927f-6303037c5269" />
+
 
 ---
 
@@ -52,7 +56,8 @@ The Auto Scaling Group automatically manages the desired number of EC2 instances
 
 The Application Load Balancer distributes incoming HTTP requests across healthy EC2 instances.
 
-![Application Load Balancer](../screenshots/alb/application-load-balancer.png)
+![Application Load Balancer]<img width="1600" height="900" alt="loadbalancer" src="https://github.com/user-attachments/assets/d8bdcead-fa1b-4da9-a5cb-a42323b0cef3" />
+
 
 ---
 
@@ -70,7 +75,8 @@ AWS CodeBuild successfully builds the application and stores the deployment arti
 
 ### Successful Build
 
-![CodeBuild Success](../screenshots/codebuild/build-success.png)
+![CodeBuild Success]<img width="1912" height="908" alt="Screenshot 2026-07-15 111227" src="https://github.com/user-attachments/assets/84eaa4b6-5ed0-4c5b-9f98-eab9e0c8edaf" />
+
 
 ### Build Logs
 
@@ -92,7 +98,8 @@ AWS Systems Manager Run Command executes the deployment script on the EC2 instan
 
 ### Run Command
 
-![SSM Run Command](../screenshots/ssm/run-command.png)
+![SSM Run Command]<img width="1917" height="907" alt="Screenshot 2026-07-13 185347" src="https://github.com/user-attachments/assets/6b6f51ab-584f-4660-8936-8454c2980e51" />
+
 
 ### Command Success
 
@@ -142,7 +149,8 @@ CloudWatch Logs collect system logs and Nginx logs from the EC2 instance.
 
 The final version of the application is accessible through the Application Load Balancer.
 
-![Website Home Page](../screenshots/application/website-homepage.png)
+![Website Home Page]<img width="1903" height="1007" alt="Screenshot 2026-07-04 144717" src="https://github.com/user-attachments/assets/c40475ee-3e82-4754-8bbd-1262ec0c4989" />
+
 
 ---
 
