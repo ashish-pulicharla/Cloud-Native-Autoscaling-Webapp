@@ -1,0 +1,60 @@
+# Output Variables
+
+## Overview
+The following output values are generated after the successful deployment of the Compute infrastructure.
+
+## EC2 Outputs
+
+| Output | Description |
+|---------|-------------|
+| EC2 Instance ID | Unique identifier of the EC2 instance |
+| EC2 Public IP | Public IP address of the EC2 instance |
+| EC2 Private IP | Private IP address of the EC2 instance |
+
+## Launch Template Outputs
+
+| Output | Description |
+|---------|-------------|
+| Launch Template ID | Unique ID of the Launch Template |
+| Launch Template Name | Name of the Launch Template |
+
+## Auto Scaling Group Outputs
+
+| Output | Description |
+|---------|-------------|
+| Auto Scaling Group Name | Name of the Auto Scaling Group |
+| Desired Capacity | Desired number of EC2 instances |
+| Running Instances | Number of active EC2 instances |
+
+## Application Load Balancer Outputs
+
+| Output | Description |
+|---------|-------------|
+| Load Balancer ARN | Amazon Resource Name of the ALB |
+| Load Balancer DNS Name | DNS name used to access the application |
+| Load Balancer Zone ID | Hosted Zone ID of the ALB |
+
+## Listener Outputs
+
+| Output | Description |
+|---------|-------------|
+| Listener ARN | Amazon Resource Name of the Listener |
+| Listener Port | Listener port number |
+
+## Target Group Outputs
+
+| Output | Description |
+|---------|-------------|
+| Target Group ARN | Amazon Resource Name of the Target Group |
+| Healthy Targets | Number of healthy registered targets |
+
+## Amazon RDS Outputs
+
+| Output | Description |
+|---------|-------------|
+| RDS Endpoint | Endpoint used to connect to the database |
+| Database Name | Name of the database |
+| Database Port | Database connection port |
+
+## Purpose
+These output values provide important information about the deployed AWS infrastructure, allowing users to access the application, connect to the database, and verify the deployed resources.
