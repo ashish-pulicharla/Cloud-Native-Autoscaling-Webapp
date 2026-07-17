@@ -1,6 +1,7 @@
 version: 0.2
 
 phases:
+
   install:
     commands:
       # Optional: Install tools or check versions if needed for your environment setup
