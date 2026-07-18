@@ -12,7 +12,7 @@ To enhance security, deployment is performed using **AWS Systems Manager (SSM)**
 
 > **Architecture Diagram**
 
-![System Architecture]<img width="687" height="395" alt="system_architecture" src="https://github.com/user-attachments/assets/15c2cce7-e9d4-465a-9cb1-49f656af0a16" />
+![System Architecture]<img width="687" height="395" alt="system_architecture" src="https://github.com/user-attachments/assets/3aded938-49e3-4297-9772-2839ab76db64" />
 
 
 ---
@@ -73,18 +73,90 @@ To enhance security, deployment is performed using **AWS Systems Manager (SSM)**
 ```text
 Cloud-Native-Auto-Scaling-Webapp/
 │
-├── app/                 # Web application
-├── terraform/           # Infrastructure as Code
-├── compute/             # EC2, ALB, Auto Scaling, RDS
-├── cicd/                # CodeBuild and deployment scripts
-├── monitoring/          # CloudWatch & SNS configuration
-├── security/            # IAM, Security Groups, SSM
-├── testing/             # Testing documentation
-├── screenshots/         # Project screenshots
-├── documentation/       # Project report and presentation
-├── README.md
+├── .github/
+│
+├── terraform/
+│   ├── iam.tf
+│   ├── internet_gateway.tf
+│   ├── nat_gateway.tf
+│   ├── outputs.tf
+│   ├── provider.tf
+│   ├── README.md
+│   ├── route_tables.tf
+│   ├── security_groups.tf
+│   ├── subnet.tf
+│   ├── terraform.tfvars
+│   ├── variables.tf
+│   └── vpc.tf
+│
+├── compute/
+│   ├── autoscaling.tf
+│   ├── ec2.tf
+│   ├── launch_template.tf
+│   ├── listener.tf
+│   ├── load_balancer.tf
+│   ├── outputs.tf
+│   ├── rds.tf
+│   ├── README.md
+│   └── target_group.tf
+│
+├── app/
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+│
+├── cicd/
+│   ├── buildspec.yml
+│   ├── codebuild-policy.json
+│   ├── deploy-buildspec.yml
+│   ├── README.md
+│   └── ssm-deploy.sh
+│
+├── monitoring/
+│   ├── alarms.md
+│   ├── cloudwatch-agent-config.json
+│   ├── cloudwatch-dashboard.json
+│   ├── monitoring-setup.md
+│   ├── README.md
+│   └── sns-notification.md
+│
+├── security/
+│   ├── iam-roles.md
+│   ├── README.md
+│   ├── security-groups.md
+│   └── ssm-security.md
+│
+├── testing/
+│   ├── application-testing.md
+│   ├── deployment-testing.md
+│   ├── monitoring-testing.md
+│   ├── README.md
+│   └── screenshots.md
+│
+├── documentation/
+│   ├── Presentation.pptx
+│   ├── Project_Report.docx
+│   ├── Project_Report.pdf
+│   └── README.md
+│
+├── screenshots/
+│   ├── alb/
+│   ├── application/
+│   ├── autoscaling/
+│   ├── cloudwatch/
+│   ├── codebuild/
+│   ├── documentation/
+│   ├── ec2/
+│   ├── github/
+│   ├── networking/
+│   ├── s3/
+│   ├── sns/
+│   ├── ssm/
+│   └── terraform/
+│
+├── .gitignore
 ├── LICENSE
-└── .gitignore
+└── README.md
 ```
 
 ---
