@@ -83,8 +83,7 @@ Cloud-Native-Auto-Scaling-Webapp/
 ├── screenshots/         # Project screenshots
 ├── documentation/       # Project report and presentation
 ├── README.md
-├── LICENSE
-└── .gitignore
+
 ```
 
 ---
