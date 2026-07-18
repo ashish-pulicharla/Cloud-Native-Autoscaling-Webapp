@@ -82,7 +82,7 @@ Cloud-Native-Auto-Scaling-Webapp/
 ├── testing/             # Testing documentation
 ├── screenshots/         # Project screenshots
 ├── documentation/       # Project report and presentation
-├── README.md
+└── README.md
 
 ```
 
