@@ -12,7 +12,7 @@ To enhance security, deployment is performed using **AWS Systems Manager (SSM)**
 
 > **Architecture Diagram**
 
-![System Architecture]<img width="687" height="395" alt="system_architecture" src="https://github.com/user-attachments/assets/6b28ff9b-6def-4f2d-a9d6-03f684290f64" />
+![System Architecture]<img width="687" height="395" alt="system_architecture" src="https://github.com/user-attachments/assets/3aded938-49e3-4297-9772-2839ab76db64" />
 
 
 ---
